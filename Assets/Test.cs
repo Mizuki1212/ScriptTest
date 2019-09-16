@@ -8,7 +8,7 @@ public class Boss {
 
 	// int型の変数mpを宣言し53で初期化
 
-	private int mp =53;            // 魔力
+	public int mp =53;            // 魔力
 
 
 
@@ -71,8 +71,10 @@ public class Test : MonoBehaviour {
 		Boss lastboss = new Boss ();
 
 		// Magic関数を10回使った後に、更にMagic関数を呼び出しMPが足りないのメッセージを表示させる
-		for (int i = 0; i <= 10;i ++ ){
-		lastboss.Magic (5); 
+		int mpdamage;
+		for (int i = 0; i <= 9;i ++ ){
+			lastboss.Magic (5); 
+
 
 
 			}
