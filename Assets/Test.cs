@@ -23,10 +23,8 @@ public class Boss {
 
 		// MPが足りない場合も表示させる
 
-		if (this.mp < mpdamage)
-
-		Debug.Log ("MPが足りないため魔法が使えない。");
-
+		if (this.mp < mpdamage) 
+			Debug.Log ("MPが足りないため魔法が使えない。");
 		}
 }
 				
