@@ -8,37 +8,25 @@ public class Boss {
 
 	// int型の変数mpを宣言し53で初期化
 
-	public int mp =53;            // 魔力
-
-
+	private int mp =53;            // 魔力
 
 	// 魔力消費用の関数
 	public void Magic (int mpdamage){
-
-		// Magic関数内でMPを5減らし、コンソールに文字列を表示させる
 
 		this.mp -= mpdamage;
 
 		Debug.Log ("魔法攻撃をした。残りMPは" + mp);
 
-		// MPが足りない場合も表示させる
-
-		if (this.mp < mpdamage) 
-			Debug.Log ("MPが足りないため魔法が使えない。");
+		if(mp < mpdamage) 
+			
+				Debug.Log ("MPが足りないため魔法が使えない。");
 		}
 }
 				
-
-
-
-
-
 public class Test : MonoBehaviour {
 
 			void Start () {
-
-
-
+		
 		// -----課題その１ ：配列を宣言して出力する-----------
 
 		// 要素数5の配列を初期化する
@@ -62,23 +50,17 @@ public class Test : MonoBehaviour {
 	
 			}
 	// -----------------------------------------------
-
-
-
    //-----発展課題　:Bossクラスに変数mpとMagic関数を作成してstart関数から呼び出す
 		Boss lastboss = new Boss ();
 
 		// Magic関数を10回使った後に、更にMagic関数を呼び出しMPが足りないのメッセージを表示させる
-		int mpdamage;
-		for (int i = 0; i <= 9;i ++ ){
-			lastboss.Magic (5); 
 
 
 
-			}
+		for (int i = 0; i < 10; i++){ 
+			lastboss.Magic (5);
 		}
-
-			
+	}
 
 	//Update is called once per frame
 		void Update () {
