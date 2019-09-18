@@ -11,16 +11,21 @@ public class Boss {
 	private int mp =53;            // 魔力
 
 	// 魔力消費用の関数
+
+
+
+
 	public void Magic (int mpdamage){
+		
+		int magicdamage;
+		if (mp >= mpdamage) {
+			this.mp -= mpdamage;
+			Debug.Log ("魔法攻撃をした。残りMPは" + mp);
 
-		this.mp -= mpdamage;
-
-		Debug.Log ("魔法攻撃をした。残りMPは" + mp);
-
-		if(mp < mpdamage) 
-			
-				Debug.Log ("MPが足りないため魔法が使えない。");
+		} else {
+			Debug.Log ("MPが足りないため魔法が使えない。");
 		}
+	}
 }
 				
 public class Test : MonoBehaviour {
@@ -57,8 +62,10 @@ public class Test : MonoBehaviour {
 
 
 
-		for (int i = 0; i < 10; i++){ 
+		for (int i = 0; i <= 10; i++){ 
 			lastboss.Magic (5);
+
+
 		}
 	}
 
